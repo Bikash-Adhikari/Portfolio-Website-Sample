@@ -1,0 +1,116 @@
+================ About Me =====================
+I'm a Web Designer & Developer
+
+I'm a New York, USA-based product designer with a foucs on we design, UI/UX design, illustration, a visual development. I have a diverse range of experience having worked across various fields and industries. <br> <br>With 07 years experience as a professional web designer, I have acquired the skills and knowledge necessary to make your project success!
+
+
+================ My Resume =====================
+.education
+--------------
+Diploma In Graphic Design
+New York - University
+2012 - 2013
+
+
+Diploma In Web Design
+United States - University
+2014 - 2015
+
+
+Diploma In UI/UX Design
+Canada - University
+2015 - 2016
+
+
+Masters In Web Design
+New York - University
+2017 - 2018
+
+
+
+
+
+
+
+.experience
+--------------------------
+
+Graphic Designer
+Bluebase Design
+2018 - 2019
+
+
+Front-End Developer
+Larsen & Toubro
+2018 - 2022
+
+
+Front-End Developer
+Envato Market
+2022 - Present
+
+
+
+
+
+
+
+
+
+
+.personal-skills
+---------------------------------
+Front-End Developer ------------>>>>
+
+HTML
+Advanced
+
+
+CSS
+Advanced
+
+
+
+JavaScript
+Advanced
+
+
+React
+Intermediate
+
+
+
+Bootstrap
+Basic
+
+
+
+JQuery
+Basic
+
+
+
+Back-End Developer ------------>>>>
+
+PHP
+Intermediate
+
+
+Python
+Basic
+
+
+MySQL
+Intermediate
+
+
+Node JS
+Basic
+
+
+Firebase
+Intermediate
+
+
+
+========================== Services =======================
