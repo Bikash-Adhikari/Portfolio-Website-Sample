@@ -29,6 +29,8 @@
 --dark-color: hsl(var(--hue) 26% 12%); /* dark */
 
 
+
+/* ================================================================================================== */
 /* ======= Changeable colors for dark/light theme ========= */
 --color-01: hsl(var(--hue) var(--sat) var(--light));   /* primary to dark */
 --color-02: hsl(var(--hue) 45%  98%);   /* white to dark */
@@ -51,7 +53,7 @@
 --scrollbar-color: hsl(var(--hue) 25% 20%);
 --scrollbar-thumb: hsl(var(--hue) var(--sat) var(--light));
 --scrollbar-thumb-hover: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
-
+/* ======================================================================================================== */
 
 
 /* ============ Font and typography =========== */
@@ -102,9 +104,70 @@
 
 
 
-
-
 /* ============ Light Theme =============== */
+.light-theme{
+--color-01: hsl(var(--hue) 26% 12%);   /* primary to dark */
+--color-02: hsl(var(--hue) 26% 12%);   /* white to dark */
+--color-03: hsl(var(--hue) 45% 98%);   /* dark to white */
+--color-04: hsl(var(--hue) 9% 46%);   /* light graygray to dark-grey */
+--color-05: hsl(var(--hue) var(--sat) var(--light));   /* dark to primary */
+
+--body-color: hsl(var(--hue) 45% 97%); /* dark to white */
+
+
+/* =========== Background colors ============ */
+--bottom-nav-bg: hsl(var(--hue) 32% 85% / .8);
+--card-bg: hsl(0 0% 100%);
+--modal-backdrop-bg: hsl(var(--hue) 50% 12% / .5);
+--footer-bg: linear-gradient(360deg, hsl(var(--hue) var(--sat) var(--light)), hsl(var(--hue) var(--sat) var(--light) / .75));
+
+
+
+--scrollbar-color: hsl(var(--hue) 9% 60%);
+--scrollbar-thumb: hsl(var(--hue) 9% 25%);
+--scrollbar-thumb-hover: hsl(var(--hue) 9% 17%);
+
+    .bottom-nav .menu-hide-btn{
+        box-shadow: 0 2px 4px hsl(0, 0%, 1%, .25);
+    }
+
+    .pro-card,
+    .skill-card,
+    .service-card,
+    .portfolio-card,
+    .contact-form-body{
+        box-shadow: 0 2px 4px hsl(0, 0%, 1%, .25);
+    }
+
+    .contact-icon,
+    .contact-social-links li{
+        box-shadow: 0 2px 4px hsl(0, 0%, 1%, .25);
+    }
+
+    .sue-footer .copy-right{
+        color: hsl(var(--hue) 26% 30%);
+    }
+
+    .sue-footer .copy-right a{
+        color: hsl(var(--hue) 26% 30%);
+    }
+
+    .sue-footer .copy-right a:hover{
+        color: hsl(var(--hue) 0% 0%);
+    }
+
+    .to-top-btn{
+        background: hsl(var(--hue) 26% 12% / .2);
+    }
+
+
+}
+
+
+
+
+
+
 
 /* =========================================== 
    Reset/Normalize
@@ -234,11 +297,100 @@ body{
 
 
 /* ============ Customized Cursor =============== */
+.cursor{
+    z-index: var(--z-max);
+    position: fixed;
+    /* top: 50%;
+    left: 50%; */
+    pointer-events: none;
+}
+
+.cursor-dot{
+    position: absolute;
+    background: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition-property: top, left, width, height;
+    transition-duration: .03s, .03s, .3s, .3s;
+}
+
+
+.cursor-dot.large{
+    background-color: hsl(var(--hue) var(--sat) var(--light) / .35);
+    width: 75px;
+    height: 75px;
+    transition-property: top, left, width, height;
+    transition-duration: .03s, .03s, .3s, .3s;
+}
+
+
+
+.cursor-circle{
+    position: absolute;
+    border: 2px solid var(--primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    transition-property: top, left;
+    transition-duration: .09s, .09s;
+}
+
 
 
 
 
 /* ============ To top button with scroll indicator bar =============== */
+.to-top-btn{
+    z-index: var(--z-fixed);
+    position: fixed;
+    background: hsl(var(--hue) 54% 74% / .2);
+    height: 100px;
+    width: 2px;
+    bottom: 25px;
+    right: -30px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.to-top-btn.active{
+    right: 30px;
+}
+
+
+
+
+.to-top-btn a{
+    color: var(--color-01);
+    transition: .3s;
+}
+
+
+.to-top-btn a:hover{
+    color: var(--hover-color);
+}
+
+.to-top-btn a span{
+    position: absolute;
+    left: 0;
+    bottom: 155px;
+    transform: rotateZ(90deg);
+    transform-origin: left;
+    font-size: .85rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.to-top-btn .scroll-indicator-bar{
+    position: absolute;
+    background: var(--color-01);
+    width: 2px;
+    height: auto;
+    opacity: .5;
+}
 
 
 
@@ -371,9 +523,22 @@ body{
     transform: rotate(-15deg);
 }
 
-
+/* 
 .theme-btn .moon-icon{
     display: none;
+} */
+
+
+.theme-btn.active-sun-icon .moon-icon,
+.theme-btn .sun-icon{
+    opacity: 1;
+    transition: .3s;
+}
+
+.theme-btn.active-sun-icon .sun-icon,
+.theme-btn .moon-icon{
+    opacity: 0;
+    transition: .3s;
 }
 
 
@@ -381,13 +546,8 @@ body{
 
 
 
-
-
-
-
-
 /* =========================================================
-     Button navigation Menu 
+     Buttom navigation Menu 
 ============================================================ */
 .bottom-nav-container{
     position: relative;
